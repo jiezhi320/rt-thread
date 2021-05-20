@@ -890,7 +890,7 @@ int chdir(const char *path)
     closedir(d);
 
     /* copy full path to working directory */
-    strncpy(working_directory, fullpath, DFS_PATH_MAX);
+    strncpy(working_directory, fullpath, DFS_PATH_MAX - 1);
     /* release normalize directory path name */
     rt_free(fullpath);
 
